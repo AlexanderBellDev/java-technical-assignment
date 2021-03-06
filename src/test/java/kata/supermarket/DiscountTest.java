@@ -38,6 +38,8 @@ class DiscountTest {
         basket.add(productTwo.oneOf());
         basket.add(productTwo.oneOf());
 
+
+
         assertEquals(BigDecimal.valueOf(55).doubleValue(),basket.total().doubleValue());
     }
 
