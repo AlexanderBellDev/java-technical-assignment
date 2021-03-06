@@ -26,6 +26,8 @@ public class BuyThreeItemsForPriceOfTwoDiscount extends Discount {
         itemByPriceMap.forEach(ascendingOrderMap::put);
 
         for (BigDecimal prices : ascendingOrderMap.keySet()) {
+            // if there is an item with a quantity of three it will discount one of them
+            // it will try the cheapest items first
             if(ascendingOrderMap.get(prices).size() >= 3){
                 return prices;
             }

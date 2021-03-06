@@ -19,7 +19,7 @@ public class BuyOneGetOneFreeDiscount extends Discount {
     @Override
     public BigDecimal calculateDiscount() {
         if(currentBasket.size() < 2) return BigDecimal.ZERO;
-
+        //if basket has at least two items it will discount the cheapest
         List<Item> sortItemsByCheapest = currentBasket.stream()
                 .sorted(Comparator.comparing(Item::price))
                 .collect(Collectors.toList());
